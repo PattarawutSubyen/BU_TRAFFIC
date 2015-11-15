@@ -30,11 +30,29 @@
 
     </LinearLayout>
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ABOUT ME"
-        android:id="@+id/button"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentBottom="true" />
+        android:id="@+id/my_linear"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABOUT ME"
+            android:id="@+id/button"
+
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickExercise"
+            android:text="Exercise"
+            android:id="@+id/button2"
+            android:layout_weight="1" />
+    </LinearLayout>
+
 </RelativeLayout>

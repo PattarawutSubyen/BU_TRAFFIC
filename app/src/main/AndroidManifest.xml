@@ -23,7 +23,8 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".DetialActivity"></activity>
+        <activity android:name=".DetialActivity" />
+        <activity android:name=".ExerciseActivity"></activity>
     </application>
 
 </manifest>
