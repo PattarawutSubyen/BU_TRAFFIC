@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="times1">
+        <item>Dont Turn Left</item>
+        <item>Random</item>
+        <item>Random</item>
+        <item>Random</item>
+    </string-array>
+
+    <string-array name="times2">
+        <item>Dont Turn Left</item>
+        <item>Random</item>
+        <item>Right</item>
+        <item>Random</item>
+    </string-array>
+
+    <string-array name="times3">
+        <item>Dont Turn Left</item>
+        <item>Random</item>
+        <item>Right</item>
+        <item>Random</item>
+    </string-array>
+
+    <string-array name="times4">
+        <item>Dont Turn Left</item>
+        <item>Random</item>
+        <item>Right</item>
+        <item>Random</item>
+    </string-array>
+
+    <string-array name="times5">
+        <item>Dont Turn Left</item>
+        <item>Random</item>
+        <item>Random</item>
+        <item>Right</item>
+    </string-array>
+
+
+
+
+
+</resources>
