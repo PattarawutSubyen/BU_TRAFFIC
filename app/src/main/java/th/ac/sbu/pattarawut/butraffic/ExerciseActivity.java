@@ -20,6 +20,7 @@ public class ExerciseActivity extends AppCompatActivity {
             choice3RadioButton, choice4RadioButton;
 
     private int timesAnInt = 0;
+    private  int scoreAnInt = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +66,8 @@ public class ExerciseActivity extends AppCompatActivity {
         intChoice[3] = R.array.times4;
         intChoice[4] = R.array.times5;
 
+        checkScore();
+
         timesAnInt += 1;
 
         if (timesAnInt < 5) {
@@ -75,12 +78,34 @@ public class ExerciseActivity extends AppCompatActivity {
             choice2RadioButton.setText(strMychoice[1]);
             choice3RadioButton.setText(strMychoice[2]);
             choice4RadioButton.setText(strMychoice[3]);
+
+
         } else {
 
-            startActivity(new Intent(ExerciseActivity.this, ScoreActivity.class));
+            Intent objIntent = new Intent(ExerciseActivity.this, ScoreActivity.class);
+            objIntent.putExtra("Score", scoreAnInt);
+            startActivity(objIntent);
+
+
         }
 
     } //click answer
+
+    private void checkScore() {
+
+        final int[] intUserChoose = {1,2,3,4,4};
+        choiceRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (intUserChoose[timesAnInt] == checkedId) {
+                    scoreAnInt += 1;
+                }
+
+
+            } //event
+        });
+    } //check score
 
 
     private  void bindWidget() {

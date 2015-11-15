@@ -9,4 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="th.ac.sbu.pattarawut.butraffic.ScoreActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="God!"
+        android:id="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/h1"
+        android:foregroundGravity="center_horizontal"
+        android:gravity="center_vertical" />
 </RelativeLayout>
