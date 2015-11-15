@@ -51,53 +51,55 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        //create listview
+        createListView();
+
+
     }    //main method
+
+    private void createListView() {
+        //setup array แบบ 1
+        String[] strTitle = new String[20];
+        strTitle[0] = "Don't Turn Left";
+        strTitle[1] = "Don't Turn Right";
+        strTitle[2] = "Go Straight";
+        strTitle[3] = "Turn Right";
+        strTitle[4] = "Turn Left";
+        strTitle[5] = "Exit";
+        strTitle[6] = "In";
+        strTitle[7] = "Out";
+        strTitle[8] = "Stop";
+        strTitle[9] = "Height Restriction 2.5 M";
+        strTitle[10] = "Junction";
+        strTitle[11] = "Don't Turn";
+        strTitle[12] = "Stop";
+        strTitle[13] = "Approaching Cars Have Right of Way";
+        strTitle[14] = "No Overtaking";
+        strTitle[15] = "In";
+        strTitle[16] = "Stop Check Point";
+        strTitle[17] = "Speed Restriction 50";
+        strTitle[18] = "Width Restriction 2.5 M";
+        strTitle[19] = "5.0 M";
+
+        //setup array แบบ 2
+        int[] intIcon = {R.drawable.traffic_01,R.drawable.traffic_02,R.drawable.traffic_03,
+                R.drawable.traffic_04,R.drawable.traffic_05,R.drawable.traffic_06,
+                R.drawable.traffic_07,R.drawable.traffic_08,R.drawable.traffic_09,
+                R.drawable.traffic_10,R.drawable.traffic_11,R.drawable.traffic_12,
+                R.drawable.traffic_13,R.drawable.traffic_14,R.drawable.traffic_15,
+                R.drawable.traffic_16,R.drawable.traffic_17,R.drawable.traffic_18,
+                R.drawable.traffic_19,R.drawable.traffic_20,};
+
+        PatAdapter objPatAdapter = new PatAdapter(MainActivity.this, strTitle, intIcon);
+        trafficListView.setAdapter(objPatAdapter);
+
+
+    } //create listview
 
     private void bindWidget() {
         trafficListView = (ListView) findViewById(R.id.listView);
         aboutMeButton = (Button) findViewById(R.id.button);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://th.ac.sbu.pattarawut.butraffic/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://th.ac.sbu.pattarawut.butraffic/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
-    }
 }        //main class
